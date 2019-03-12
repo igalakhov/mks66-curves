@@ -67,15 +67,51 @@ void MDLParser::run_file(EdgeMatrix * m, TransformationMatrix * t, Drawer * d) {
                 ));
             }
         } else if(str == "apply"){
-            m->apply_transformation(t);
-        } else if(str == "save"){
-            std::getline(file, str);
-            trim(str);
-            args = split_string(str);
+                m->apply_transformation(t);
+        } else if(str == "circle"){
+                std::getline(file, str);
+                trim(str);
+                args = split_string(str);
 
-            d->clear();
-            d->draw_edges(m);
-            d->save(args.at(0), ".ppm");
+                draw_circle(m, std::stof(args.at(0)), std::stof(args.at(1)), std::stof(args.at(2)), std::stof(args.at(3)));
+
+        } else if (str == "hermite") {
+                std::getline(file, str);
+                trim(str);
+                args = split_string(str);
+
+                draw_hermite(m, std::stof(args.at(0)),
+                                std::stof(args.at(1)),
+                                std::stof(args.at(2)),
+                                std::stof(args.at(3)),
+                                std::stof(args.at(4)),
+                                std::stof(args.at(5)),
+                                std::stof(args.at(6)),
+                                std::stof(args.at(7)));
+
+
+        } else if (str == "bezier") {
+                std::getline(file, str);
+                trim(str);
+                args = split_string(str);
+
+                draw_bezier(m, std::stof(args.at(0)),
+                             std::stof(args.at(1)),
+                             std::stof(args.at(2)),
+                             std::stof(args.at(3)),
+                             std::stof(args.at(4)),
+                             std::stof(args.at(5)),
+                             std::stof(args.at(6)),
+                             std::stof(args.at(7)));
+
+        } else if(str == "save"){
+                std::getline(file, str);
+                trim(str);
+                args = split_string(str);
+
+                d->clear();
+                d->draw_edges(m);
+                d->save(args.at(0), ".ppm");
         } else if(str == "quit"){
             return;
         } else {

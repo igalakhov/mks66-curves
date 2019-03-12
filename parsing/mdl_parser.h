@@ -14,6 +14,7 @@
 #include "../matrix/transformation_matrix.h"
 #include "../matrix/edge_matrix.h"
 #include "../drawing/drawer.h"
+#include "../drawing/parametric/parametric.h"
 
 class MDLParser {
 public:

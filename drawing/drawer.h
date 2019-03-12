@@ -12,13 +12,12 @@ class Drawer : public Display {
 public:
     Drawer(); // constructor
 
-    // drawing
+    // drawing basics
     void draw_edges(EdgeMatrix * );
     void draw_line(int, int, int, int);
     void draw_rectangle(int, int, int, int);
     void change_color(unsigned char, unsigned char, unsigned char);
     void set(int, int); // set a specific point to the current color
-
 
 protected:
 
