@@ -35,13 +35,13 @@ void EdgeMatrix::multiply_recursive(float_mat * m, int start, int end, float_mat
     }
 
     // start two threads to do half the multiplication
-    int mid = (end - start)/2;
+    //int mid = (end - start)/2;
 
-    std::thread first_mult (&EdgeMatrix::multiply_recursive, this, m, start, mid, new_matrix, depth-1);
-    std::thread second_mult (&EdgeMatrix::multiply_recursive, this, m, mid, end, new_matrix, depth-1);
+    //std::thread first_mult (&EdgeMatrix::multiply_recursive, this, m, start, mid, new_matrix, depth-1);
+    //std::thread second_mult (&EdgeMatrix::multiply_recursive, this, m, mid, end, new_matrix, depth-1);
 
-    first_mult.join();
-    second_mult.join();
+    //first_mult.join();
+    //second_mult.join();
 
 }
 

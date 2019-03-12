@@ -1,5 +1,4 @@
 #include <iostream>
-#include <zconf.h>
 #include <thread>
 #include <string>
 #include <fstream>

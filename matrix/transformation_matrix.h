@@ -5,6 +5,8 @@
 #ifndef WORK_01_LINE_TRANSFORMATION_MATRIX_H
 #define WORK_01_LINE_TRANSFORMATION_MATRIX_H
 
+#include <cassert>
+
 #include "edge_matrix.h"
 #include "../settings.h"
 

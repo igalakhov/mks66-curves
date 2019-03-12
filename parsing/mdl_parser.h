@@ -10,6 +10,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <algorithm>
 
 #include "../matrix/transformation_matrix.h"
 #include "../matrix/edge_matrix.h"

@@ -1,5 +1,5 @@
-all: main.o drawer.o display.o edge_matrix.o transformation_matrix.o mdl_parser.o obj_parser.o
-	g++ -std=c++11 -o main.out main.o drawer.o display.o edge_matrix.o transformation_matrix.o mdl_parser.o obj_parser.o
+all: main.o drawer.o display.o edge_matrix.o transformation_matrix.o mdl_parser.o obj_parser.o parametric.o
+	g++ -std=c++11 -o main.out main.o drawer.o display.o edge_matrix.o transformation_matrix.o mdl_parser.o obj_parser.o parametric.o
 	./main.out
 
 main.o: main.cpp settings.h
@@ -22,6 +22,9 @@ mdl_parser.o: parsing/mdl_parser.cpp matrix/transformation_matrix.h matrix/edge_
 
 obj_parser.o: parsing/obj_parser.h matrix/edge_matrix.h settings.h
 	g++ -std=c++11 -c parsing/obj_parser.cpp
+
+parametric.o: drawing/parametric/parametric.h settings.h
+	g++ -std=c++11 -c drawing/parametric/parametric.cpp
 
 clean:
 	touch fakefile.o

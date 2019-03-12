@@ -7,6 +7,7 @@
 #ifndef WORK_01_LINE_DRAWER_H
 #define WORK_01_LINE_DRAWER_H
 
+#include <cassert>
 
 class Drawer : public Display {
 public:
