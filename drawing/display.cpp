@@ -33,7 +33,7 @@ void Display::clear(){
 void Display::display(){
     FILE * f;
 
-    f = popen("/opt/local/bin/display", "w");
+    f = popen("display", "w");
 
     fprintf(f, "P3\n%d %d\n%d\n", IMAGE_WIDTH, IMAGE_HEIGHT, MAX_COLOR);
 

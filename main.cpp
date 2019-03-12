@@ -53,18 +53,10 @@ void face_animation(){
     d->draw_edges(m);
 
     d->display();
-
-
-
 }
 
+
 int main(){
-
-    //face_animation();
-
-    //return 0;
-
-    // renders the script
     auto d = new Drawer();
 
     auto m = new EdgeMatrix();
