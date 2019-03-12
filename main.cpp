@@ -65,6 +65,4 @@ int main(){
     auto p = new MDLParser("../script.mdl");
 
     p->run_file(m, t, d);
-
-    d->save("../hello.ppm", "ppm");
 }
