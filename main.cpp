@@ -62,7 +62,7 @@ int main(){
     auto m = new EdgeMatrix();
     auto t = TransformationMatrix::identity();
 
-    auto p = new MDLParser("../script.mdl");
+    auto p = new MDLParser("script.mdl");
 
     p->run_file(m, t, d);
 }
